@@ -5,18 +5,25 @@ import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
-  <header class="borderGuide flex gap-3">
+  <header class="flex gap-3">
     <img src="@/assets/vue.svg" alt="Vue logo" class="logo vue" />
-    <div class="rightSide flex flex-col justify-between">
+    <div class="rightSide">
       <HelloWorld msg="Great!" />
-      <nav class="">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+      <nav class="mt-3 flex gap-3">
+        <RouterLink to="/" class="text-[#EBEBEB99] underline underline-offset-2"
+          >Home</RouterLink
+        >
+        <div class="text-gray-400 font-bold">|</div>
+        <RouterLink
+          to="/about"
+          class="text-[#EBEBEB99] underline underline-offset-2"
+          >About</RouterLink
+        >
       </nav>
     </div>
   </header>
 
-  <div id="rightSide" class="borderGuide">
+  <div id="rightSide" class="flex justify-center items-center">
     <RouterView />
   </div>
 </template>
